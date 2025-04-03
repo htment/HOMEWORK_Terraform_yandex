@@ -1,27 +1,17 @@
-1. Создать сервисный аккаунт в облаке. Выдать права editor
-2. Выпустить авторизованный ключ для этого аккаунта и скачать его по пути ~/.authorized_key.json . 
-3. Вписать в переменные cloud_id и folder_id в variables.tf
-4. Изменить ssh-ключ в файле cloud-init.yml (ssh-keygen -t ed25519). cp terraformrc ~/.terraformrc
-5. terraform init && terraform apply
-6. rm ~/.ssh/known_hosts. Выполнить playbook ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i ./hosts.ini test.yml
-7. По окончании выполнить terraform destroy
+### Задание 1 
 
-https://www.jeffgeerling.com/blog/2022/using-ansible-playbook-ssh-bastion-jump-host
+Повторить демонстрацию лекции(развернуть vpc, 2 веб сервера, бастион сервер)
 
-Настройка доступа по ssh через ssh config: 
-~/.ssh/config
-```
-Host 89.169.142.236  #адрес вашего бастиона
-   User user
 
-Host 10.0.*
-        ProxyJump 89.169.142.236
-        User user
+**ОТВЕТ**
+Провайдер расположен по ссылке:
+[https://github.com/htment/HOMEWORK_Terraform_yandex](https://github.com/htment/HOMEWORK_Terraform_yandex)
 
-Host *.ru-central1.internal
-        ProxyJump 89.169.142.236
-        User user
+![screen_TERRAFORM_init](./img/terraform_init.png)
 
-```
+### Задание 2 
 
-Или более простой для понимания, но менее удобный для частого применения: ssh -J <jump server> <remote server>
+С помощью ansible подключиться к web-a и web-b , установить на них nginx.(написать нужный ansible playbook)
+
+
+Провести тестирование и приложить скриншоты развернутых в облаке ВМ, успешно отработавшего ansible playbook. 
