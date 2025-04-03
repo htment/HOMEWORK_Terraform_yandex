@@ -27,3 +27,7 @@
 
 
 Провести тестирование и приложить скриншоты развернутых в облаке ВМ, успешно отработавшего ansible playbook. 
+![yandex_cloud2.png](./img/yandex_cloud2.png)
+![ANSIBLE_HOST_KEY_CHECKING.png](./img/ANSIBLE_HOST_KEY_CHECKING.png)
+Заходим на хост и проверяем
+![nginx_test.png](./img/nginx_test.png)
