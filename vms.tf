@@ -1,7 +1,7 @@
 
 #считываем данные об образе ОС
 data "yandex_compute_image" "ubuntu_2204_lts" {
-  family = "ubuntu-2204-lts"
+  family = "ubuntu-2404-lts-oslogin"
 }
 
 resource "yandex_compute_instance" "bastion" {
